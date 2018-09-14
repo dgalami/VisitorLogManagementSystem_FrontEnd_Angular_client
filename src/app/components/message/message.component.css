@@ -1,0 +1,14 @@
+.container{
+    text-align: center;
+}
+.message{
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+.goBack{
+    margin-top: 0px;
+    
+}
+.jumbotron{
+    background-color: rgb(170, 247, 223);
+}

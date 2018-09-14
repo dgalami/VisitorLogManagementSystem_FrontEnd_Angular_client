@@ -1,0 +1,36 @@
+<div class="container">
+        <div class="card" *ngIf="visitor">
+                <img class="card-img-top" src="/src/assets/images/person.png" alt="Card image cap">
+                <div class="card-body">
+                  <h5 class="card-title">{{visitor.firstName}} {{visitor.lastName}}</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item list-group-item-success">{{visitor.email}}</li>
+                  <li class="list-group-item list-group-item-success">{{visitor.phone}}</li>
+                  <li class="list-group-item list-group-item-success">
+                      <div class="input-group mb-3">
+                          <select class="custom-select" id="inputGroupSelect02" [(ngModel)]="employeeId" name="vSelect">
+                            <option selected>Select...</option>
+                            <option *ngFor="let emp of employees" [ngValue]="emp.eId">
+                                {{emp.firstName}} {{emp.lastName}}
+                            </option>
+                          </select>
+                          <div class="input-group-append">
+                            <label class="input-group-text" for="inputGroupSelect02">Employees</label>
+                          </div>
+                        </div>
+                  </li>
+                  <li class="list-group-item list-group-item-success">
+                      <div class="form-group">
+                          <label for="exampleFormControlTextarea1" class="custom-text">Reason</label>
+                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="reason" ></textarea>
+                        </div>
+                  </li>
+                </ul>
+                
+                <div class="card-body">
+                  <button class="btn btn-success" (click)="signInVisitor()" >Confirm</button>
+                  <button class="btn btn-danger" (click)="backToLog()" >Cancel</button>
+                </div>
+              </div>
+</div>

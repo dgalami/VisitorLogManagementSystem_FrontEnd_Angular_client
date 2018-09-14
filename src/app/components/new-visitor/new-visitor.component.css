@@ -1,0 +1,17 @@
+.jumbotron{
+    margin-top: 10%;
+    background:rgb(170, 247, 223);
+}
+button{
+    margin-right: 5px;
+}
+.form-group label span{
+    color: red;
+}
+h3{
+    text-align: center;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 30px;
+
+}

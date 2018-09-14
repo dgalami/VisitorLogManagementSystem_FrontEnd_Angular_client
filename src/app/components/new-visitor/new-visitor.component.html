@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="jumbotron">
+    <h3>Visitor Information</h3>
+    <form #newVisitorForm = ngForm>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="formGroupExampleInput"><span>*</span>First Name</label>
+          <input type="text" #fn = "ngModel" [(ngModel)]="visitor.firstName" class="form-control" id="formGroupExampleInput" placeholder="First Name" name="firstName" required>
+        </div>
+
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="formGroupExampleInput"><span>*</span>Last Name</label>
+          <input type="text" #ln = "ngModel" [(ngModel)]="visitor.lastName" class="form-control" id="formGroupExampleInput" placeholder="Last Name" name="lastName" required>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Company</label>
+          <input type="text" [(ngModel)]="visitor.company" class="form-control" id="formGroupExampleInput" placeholder="Company" name="company">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="formGroupExampleInput">Phone No</label>
+          <input type="text" [(ngModel)]="visitor.phone" class="form-control" id="formGroupExampleInput" placeholder="Phone No" name="phone">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Email address</label>
+      <input type="email" [(ngModel)]="visitor.email" class="form-control" id="exampleFormControlInput1" placeholder="Email" name="email">
+    </div>
+
+    <div class="text-right">
+        <button type="button" [disabled]="newVisitorForm.form.invalid" class="btn btn-success" (click)="goNext()">Submit</button>
+        <button type="button" class="btn btn-danger" (click)="goToMain()">Cancel</button>
+    </div>
+  </form>
+
+</div>
+</div>

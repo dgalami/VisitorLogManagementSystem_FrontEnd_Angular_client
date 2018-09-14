@@ -1,0 +1,29 @@
+.container{
+    text-align: center;
+}
+.card{
+    margin: 0 auto;
+    top: 30px;
+    background-color: aquamarine;
+    /* width: 10rem; */
+    width: 90% !important;
+    background:rgb(170, 247, 223);
+}
+.card-img-top{
+    width: 20%;
+    margin: 5px auto;
+}
+.list-group{
+    width: 50%;
+    margin: 0 auto;
+}
+.list-group li{
+    margin-bottom: 5px;
+}
+.btn{
+    margin-right: 10px;
+}
+.custom-text{
+    font-weight: 700;
+    font-size: 1rem;
+}

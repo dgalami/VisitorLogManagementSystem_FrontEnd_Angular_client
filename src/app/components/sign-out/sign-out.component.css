@@ -1,0 +1,38 @@
+.jumbotron{
+    margin: 5px auto;
+    text-align: center;
+    background:rgb(170, 247, 223);
+    padding-top: 10px;
+}
+.show{
+    margin-top: 100px;
+}
+.row{
+    padding: 5px;
+    text-align: center;
+}
+.card {
+    /* width: 250px; */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+.card .row .col-2 .btn{
+    margin: 10px auto;
+}
+input{
+    padding-left: 25px;
+}
+.show .col{
+    position: relative;
+}
+.jumbotron .col span{
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    color: red;
+}
+h3{
+    margin-bottom: 30px;
+}
+
+

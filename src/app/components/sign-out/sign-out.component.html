@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="jumbotron show">
+    <h3>Sign Out</h3>
+    <div class="col col-sm-12 form-group">
+      <span class="far fa-envelope form-control-icon"></span>
+      <input type="text" [(ngModel)]="email" class="form-control" placeholder="Email" name="email">
+    </div>
+
+    <p>-- OR --</p>
+
+    <div class="col col-sm-12 form-group">
+      <span class="fas fa-phone form-control-icon"></span>
+      <input type="text" [(ngModel)]="phone" class="form-control" placeholder="Phone" name="phone">
+    </div>
+    <button class="btn btn-success" (click)="searchVisitorLog()">Search</button>
+    <div style = "margin-top: 5px; text-align: left;"class="alert alert-danger" *ngIf="isNotFound">
+        <small>* {{message}}</small>
+      </div>
+  </div>
+  
+  
+
+  <div class="card" *ngIf="logV">
+    <div class="row">
+      <div class="col-2">
+        <b>Timeline</b><br>
+        {{logV.logDate}} {{logV.logInTime}}
+      </div>
+      <div class="col-4">
+        <b>Visitor Name</b><br>
+        {{logV.visitor.firstName}} {{logV.visitor.lastName}}
+      </div>
+      <div class="col-4">
+        <b>Employee Name</b><br>
+        {{logV.employee.firstName}} {{logV.employee.lastName}}
+      </div>
+      <div class="col-2">
+        <button class="btn btn-danger" (click)="signOut()">Log Out</button>
+      </div>
+
+    </div>
+  </div>
+</div>

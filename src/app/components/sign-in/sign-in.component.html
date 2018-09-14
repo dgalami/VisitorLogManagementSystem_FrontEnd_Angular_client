@@ -1,0 +1,47 @@
+<div class="container">
+   
+    <button class="btn btn-success log-btn" data-toggle="modal" data-target="#existingLogModal" (click)="reset()"><i class="fas fa-users"></i>  Existing Visitor</button>
+
+    <button class="btn btn-success log-btn" (click)="goNewVisitor()" ><i class="fas fa-users-cog"></i>  New Visitor</button>
+
+</div> 
+<!--end container-->
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="existingLogModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Existing Visitor</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      
+    </div>
+    <div class="alert alert-danger" *ngIf="isEmpty">
+        <small>Invalid Input or data not found</small>
+      </div>
+    <div class="modal-body">
+      <div class="col col-sm-12 form-group">
+        <span class="far fa-envelope form-control-icon"></span>
+        <input [(ngModel)]="email" type="text" class="form-control" placeholder="Email" name="email">
+        <!-- <button type="button" class="btn btn-success search-btn" (click)="searchByEmail()">Search By email</button> -->
+      </div>
+
+      <p>-- OR --</p>
+
+      <div class="col col-sm-12 form-group">
+        <span class="fas fa-phone form-control-icon"></span>
+        <input [(ngModel)]="phone" type="text" class="form-control" placeholder="Phone" name="phone">
+        <!-- <button type="button" class="btn btn-success search-btn" (click)="searchByPhone()">Search By phone</button> -->
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-success search-btn" (click)="search()">Search</button>
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="reset()">Close</button>
+    </div>
+  </div>
+</div>
+</div>
